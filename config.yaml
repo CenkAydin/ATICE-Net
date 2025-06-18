@@ -1,0 +1,62 @@
+# ATICE-Net Configuration File
+
+# Model Configuration
+model:
+  name: "ATICE-Net"
+  encoder_channels: [64, 128, 256, 512]
+  decoder_channels: [256, 128, 64, 32]
+  similarity_dim: 128
+  edge_attention_dim: 64
+  use_crf: true
+  use_adversarial: true
+
+# Training Configuration
+training:
+  batch_size: 8
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler_step_size: 30
+  scheduler_gamma: 0.5
+
+# Loss Weights
+loss_weights:
+  bce: 1.0
+  dice: 0.5
+  consistency: 0.3
+  adversarial: 0.1
+  edge: 0.2
+
+# Dataset Configuration
+dataset:
+  name: "CASIA2.0"
+  train_split: 0.8
+  image_size: [512, 512]
+  num_workers: 4
+
+# Data Augmentation
+augmentation:
+  horizontal_flip: 0.5
+  vertical_flip: 0.3
+  rotation: 15
+  brightness: 0.2
+  contrast: 0.2
+  saturation: 0.2
+  hue: 0.1
+
+# Paths
+paths:
+  data_dir: "./data/CASIA2.0"
+  checkpoints_dir: "./checkpoints"
+  logs_dir: "./logs"
+  results_dir: "./results"
+
+# Evaluation
+evaluation:
+  threshold: 0.5
+  metrics: ["accuracy", "f1", "iou", "precision", "recall"]
+
+# Hardware
+hardware:
+  device: "auto" # auto, cuda, cpu
+  mixed_precision: true
