@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ATICE-Net is a state-of-the-art deep learning framework for copy-move forgery detection, inspired by and improving upon LHCM-Net. This project provides a complete, modular implementation with advanced features for robust forgery detection.
 
@@ -74,7 +73,7 @@ atice_net/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/atice-net.git
+git clone https://github.com/CenkAydin/ATICE-Net.git
 cd atice-net
 ```
 
@@ -104,7 +103,7 @@ python -c "import torchvision; print(f'TorchVision version: {torchvision.__versi
 
 1. **Download CASIA 2.0**
 
-   - Request access from [CASIA website](http://forensics.idealtest.org/)
+   - Download from [CASIA website](https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset)
    - Extract the dataset to your local directory
 
 2. **Organize dataset structure**
@@ -290,18 +289,10 @@ loss_weights:
 
 ### Model Statistics
 
-- **Parameters**: ~15M trainable parameters
+- **Parameters**: ~3M trainable parameters
 - **Memory Usage**: ~4GB GPU memory (batch size 8)
 - **Training Time**: ~2-3 hours on RTX 3080 (100 epochs)
-- **Inference Time**: ~50ms per image (512x512)
-
-### Benchmark Results
-
-| Metric   | ATICE-Net | LHCM-Net | Improvement |
-| -------- | --------- | -------- | ----------- |
-| F1-Score | 0.9034    | 0.8756   | +3.2%       |
-| IoU      | 0.8234    | 0.7956   | +3.5%       |
-| Accuracy | 0.9234    | 0.8956   | +3.1%       |
+- **Inference Time**: ~50ms per image (256x256)
 
 ## 🤝 Contributing
 
@@ -330,10 +321,6 @@ black .
 flake8 .
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **CASIA 2.0 Dataset**: Provided by the Institute of Automation, Chinese Academy of Sciences
@@ -343,20 +330,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: [Your Name]
-- **Email**: [your.email@example.com]
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Author**: [Mustafa Cenk Aydın]
+- **Email**: [mustafacenk28@gmail.com.com]
+- **GitHub**: [@CenkAydin](https://github.com/CenkAydin)
 
 ## 📚 Citation
 
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{atice_net_2024,
+@article{atice_net_2025,
   title={ATICE-Net: Advanced Copy-Move Forgery Detection Network},
-  author={Your Name},
+  author={Mustafa Cenk Aydın},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
+  year={2025}
 }
 ```
 
