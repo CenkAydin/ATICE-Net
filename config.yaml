@@ -46,7 +46,7 @@ augmentation:
 
 # Paths
 paths:
-  data_dir: "./data/CASIA2.0"
+  data_dir: "D:\indirilenler\CASIA2.0_revised"
   checkpoints_dir: "./checkpoints"
   logs_dir: "./logs"
   results_dir: "./results"
